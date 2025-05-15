@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Infrastructure.Persistence;
 
 namespace Product.Infrastructure.Repositories
 {
-    internal class UnitOfWork
+    public class UnitOfWork : BaseUnitOfWork<ProductDbContext>
     {
+        public UnitOfWork(ProductDbContext context) : base(context) { }
     }
 }
